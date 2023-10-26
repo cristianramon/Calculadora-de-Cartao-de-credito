@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <title>Cartao 80X</title>
+    <style>
+        body{
+            
+            background width: 20;;
+            font: normal 20pt Arial;
+            color: rgb(16, 77, 36);
+	}
+    </style>
+    
+</head>
+<body>
+	<img src="logo.png" align="right"/>
+	<h1>CapitalConsig</h1>
+    
+    <script>
+        var a =(window.alert('ATENÇÃO! não separe o milhar, para separar os centavos use o "ponto" "." '))
+	var b =(window.alert('Exeplo- padrão 1.350,50 - usar "1350.50"'))
+	var n1 = Number(window.prompt('Informe o Valor da Margem: '))
+        var n2 = 0.0523495
+        var s  = n1 / n2
+	var st = s
+	var pc = n1*0.3
+	var lc = s*0.7
+	var lca = s-lc
+	var ps = n1*0.7
+	var re = lc*0.07
+	var rd = lc-re
+	
+        document.write(`Margem Total Utilizada : ${n1.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}`)
+	document.write('<br></br>')
+	document.write(`Parcela Compra: ${pc.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}`)
+	document.write('<br></br>')
+	document.write(`Limite Compra Aproximado: ${lca.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}`)
+	document.write('<br></br>')
+	document.write(`Parcela Saque: ${ps.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}`)
+	document.write('<br>Prazo de 80 Vezes </br>')
+	document.write('<br></br>')
+        document.write(`<strong>Saque ${lc.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}</strong>`)
+	document.write('<br></br>')
+	document.write(`<strong>Valor total ${st.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}</strong>`)
+    	document.write('<br></br>')
+	document.write(`<strong>Passar para o cliente - 7% ${rd.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}</strong>`)
+
+
+    </script>
+	<a href="modelo.html">
+            <div id="btv"><button>Voltar</button></a></div>
+	<footer>
+        <p>&copy; FP.Soluções Financeiras</p>
+    </footer>
+</body>
+</html>
